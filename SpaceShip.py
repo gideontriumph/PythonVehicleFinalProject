@@ -1,5 +1,5 @@
 """
-    Name: spaceship.py
+    Name: SpaceShip.py
     Author: Triumph Ogbonnia
     Created: 4/29/24
     Purpose: spaceship class and method
@@ -65,6 +65,7 @@ def main():
     fuel_level = float(console.input("[bold blue]Enter current fuel level >> "))
     speed = float(console.input("[bold blue]Enter current speed >> "))
     cargo_capacity = float(console.input("[bold blue]Enter cargo capacity (tons) >> "))
+    # Print spaceship details to the console
     print(f"\n[bold cyan]{name} has fuel level {fuel_level} with a current speed of {speed}MPH and {cargo_capacity} tons of cargo capacity")
     
     # Display menu for spaceship operations
@@ -103,11 +104,11 @@ def main():
             cargo = float(console.input("[bold blue]Enter the amount of cargo to load >> "))
             spaceship.load_cargo(cargo)
         elif choice.lower() == 'x':
-            # Exit the program if user chooses
+            # Exit the program if user chooses x
             print("[bold green]\nExiting program. . .")
             break
         else:
-            # Handle exception
+            # Handle invalid input exception
             print("[bold red]Invalid choice. Please try again.")
 
 
