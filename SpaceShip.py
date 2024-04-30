@@ -42,3 +42,14 @@ class Spaceship:
         else:
             # Otherwise, tell the user that there is not enough capacity
             print(f"Not enough capacity on {self.name} to load {cargo} tons of cargo.")
+           
+# Define the main function 
+def main():
+    # Get spaceship input from the user
+    name = input("Enter spaceship name >> ")
+    fuel_level = float(input("Enter current fuel level >> "))
+    speed = float(input("Enter current speed >> "))
+    cargo_capacity = float(input("Enter cargo capacity (tons) >> "))
+
+    # Create a spaceship object with user input details
+    spaceship = Spaceship(name, fuel_level, speed, cargo_capacity)
