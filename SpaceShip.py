@@ -53,3 +53,16 @@ def main():
 
     # Create a spaceship object with user input details
     spaceship = Spaceship(name, fuel_level, speed, cargo_capacity)
+    
+    # While loop
+    while True:
+        # Display menu for spaceship operations
+        print("\n==== Spaceship Operations ====")
+        print("1. Refuel")
+        print("2. Accelerate")
+        print("3. Decelerate")
+        print("4. Load Cargo")
+        print("5. Exit")
+
+        # Get user choice
+        choice = input("\nEnter your choice >> ")
