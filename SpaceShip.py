@@ -48,7 +48,7 @@ class Spaceship:
         else:
             # Otherwise, tell the user that there is not enough capacity
             print(f"[bold cyan]Not enough capacity on {self.name} to load {cargo} tons of cargo.")
-           
+            
 # Define the main function 
 def main():
     # Print progam title using rich
@@ -65,20 +65,22 @@ def main():
     fuel_level = float(console.input("[bold blue]Enter current fuel level >> "))
     speed = float(console.input("[bold blue]Enter current speed >> "))
     cargo_capacity = float(console.input("[bold blue]Enter cargo capacity (tons) >> "))
-    print(f"[bold cyan]{name} has fuel level {fuel_level} with a current speed of {speed}MPH and {cargo_capacity} tons of cargo capacity")
+    print(f"\n[bold cyan]{name} has fuel level {fuel_level} with a current speed of {speed}MPH and {cargo_capacity} tons of cargo capacity")
+    
+    # Display menu for spaceship operations
+    print()
+    console.print(
+        Panel.fit(
+            "==== Spaceship Operations ====",
+            subtitle="Press X to e(x)it",
+            style="bold blue"))
 
     # Create a spaceship object with user input details
     spaceship = Spaceship(name, fuel_level, speed, cargo_capacity)
     
     # While loop
     while True:
-        # Display menu for spaceship operations
         print()
-        console.print(
-            Panel.fit(
-                "==== Spaceship Operations ====",
-                subtitle="Press X to e(x)it",
-                style="bold blue"))
         print("[yellow]1.[yellow/] [bold cyan]Refuel")
         print("[yellow]2.[yellow/] [bold cyan]Accelerate")
         print("[yellow]3.[yellow/] [bold cyan]Decelerate")
